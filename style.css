@@ -1,65 +1,84 @@
-/* 전체 페이지 스타일 */
-body {
-  font-family: 'Arial', sans-serif;
+/* 기본 스타일 초기화 */
+* {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #f1f1f1, #e1e1e1); /* 부드러운 그라디언트 배경 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* 화면 전체를 차지하게 */
+  box-sizing: border-box;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 32px;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f0ff, #f0f8ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
   color: #333;
 }
 
-/* 폼 스타일 */
-form {
-  width: 350px;
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   padding: 30px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 12px; /* 둥근 모서리 */
-  text-align: center;
 }
 
+/* 헤더 */
+h2 {
+  font-size: 28px;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* 입력창 */
 input[type="text"],
 input[type="password"],
 input[type="number"],
 textarea {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 8px; /* 둥근 모서리 */
+  padding: 12px 15px;
+  border: 1px solid #d0e2ff;
+  border-radius: 8px;
+  margin-bottom: 15px;
   font-size: 16px;
+  transition: 0.2s;
 }
 
+input:focus,
+textarea:focus {
+  border-color: #3399ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+}
+
+/* 버튼 */
 button {
   width: 100%;
-  padding: 14px;
-  background-color: #4CAF50;
+  padding: 12px;
+  background-color: #3399ff;
   color: white;
   border: none;
-  border-radius: 8px; /* 둥근 모서리 */
+  border-radius: 8px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #1a8cff;
 }
 
+/* 링크 */
 a {
-  display: block;
+  display: inline-block;
   margin-top: 20px;
+  color: #007bff;
   text-decoration: none;
-  color: #4CAF50;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -67,49 +86,50 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 섹션 스타일 */
-section {
-  margin: 30px auto;
-  width: 350px;
-  padding: 25px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  text-align: center;
-}
-
-/* 알림 및 재고 리스트 */
-#noticeList,
-#inventoryList {
+/* 리스트 박스 */
+.list-container {
   margin-top: 20px;
+  background: #f8fbff;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
 }
 
-#noticeList div,
-#inventoryList div {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+.list-container div {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #d0e2ff;
 }
 
-h4 {
+.list-container h4 {
   font-size: 18px;
-  margin-bottom: 10px;
+  color: #0056b3;
+  margin-bottom: 6px;
+}
+
+.list-container p {
+  font-size: 15px;
   color: #333;
+  margin-bottom: 4px;
 }
 
-p {
-  font-size: 16px;
-  color: #666;
-}
-
-small {
+.list-container small {
   font-size: 12px;
-  color: #999;
+  color: #777;
+}
+
+/* 섹션 구분 */
+section {
+  margin-top: 30px;
+}
+
+/* 로그아웃 버튼 상단 배치 */
+.logout-btn {
+  display: block;
+  margin-bottom: 25px;
+  background-color: #e60023;
+}
+
+.logout-btn:hover {
+  background-color: #c4001d;
 }
