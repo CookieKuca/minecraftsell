@@ -1,52 +1,56 @@
-/* 기존 로그인 스타일 위에 계속 추가 */
+/* 기본 폰트 및 배경 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f9fafb;
+  color: #212529;
+  line-height: 1.6;
+}
 
+/* 컨테이너 공통 스타일 */
 .container {
   max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 50px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
-.dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.logout-btn {
-  background-color: #f2f4f6;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 12px;
-  cursor: pointer;
+/* 페이지 제목 */
+h2.page-title,
+h2 {
+  font-size: 24px;
   font-weight: bold;
   color: #2d64f2;
-}
-
-.card {
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 24px;
+  text-align: center;
   margin-bottom: 24px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.card h3 {
-  margin-bottom: 16px;
-  color: #2d64f2;
-}
-
-.card input,
-.card textarea {
+/* 폼 입력 필드 */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea {
   width: 100%;
   padding: 14px 16px;
   margin-bottom: 12px;
+  font-size: 15px;
   border: 1px solid #dce3ed;
   border-radius: 12px;
-  font-size: 15px;
+  background-color: #f8f9fb;
+  transition: border-color 0.2s;
 }
 
-.card button {
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2d64f2;
+}
+
+/* 버튼 스타일 */
+button {
   width: 100%;
   padding: 14px;
   background-color: #2d64f2;
@@ -56,8 +60,79 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
+button:hover {
+  background-color: #1b4de0;
+}
+
+/* 로그아웃 버튼 (작은 버튼) */
+.logout-btn {
+  background-color: #f2f4f6;
+  color: #2d64f2;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #e4e9f0;
+}
+
+/* 카드형 섹션 */
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #2d64f2;
+  margin-bottom: 16px;
+}
+
+/* 목록 출력 스타일 */
+.list-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.list-container > div {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.list-container > div:last-child {
+  border-bottom: none;
+}
+
+.list-container h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #333;
+}
+
+.list-container p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+.list-container small {
+  color: #999;
+  font-size: 12px;
+}
+
+/* 링크 그룹 */
 .link-group {
   text-align: center;
   margin-top: 16px;
@@ -65,6 +140,16 @@
 
 .link-group a {
   margin: 0 10px;
+  color: #2d64f2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 뒤로가기 링크 */
+.back-link {
+  display: block;
+  margin-top: 24px;
+  text-align: center;
   color: #2d64f2;
   text-decoration: none;
   font-weight: bold;
