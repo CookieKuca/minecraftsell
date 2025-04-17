@@ -1,40 +1,52 @@
+/* 전체 페이지 스타일 */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background: linear-gradient(135deg, #f1f1f1, #e1e1e1); /* 부드러운 그라디언트 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 화면 전체를 차지하게 */
 }
 
 h2 {
   text-align: center;
-  margin-top: 20px;
-}
-
-form {
-  width: 300px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  font-size: 32px;
+  color: #333;
 }
 
-input[type="text"], input[type="password"], input[type="number"], textarea {
+/* 폼 스타일 */
+form {
+  width: 350px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* 둥근 모서리 */
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px; /* 둥근 모서리 */
+  font-size: 16px;
 }
 
 button {
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* 둥근 모서리 */
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -43,27 +55,61 @@ button:hover {
 }
 
 a {
-  margin: 10px;
+  display: block;
+  margin-top: 20px;
   text-decoration: none;
   color: #4CAF50;
+  font-size: 16px;
+  text-align: center;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* 섹션 스타일 */
 section {
-  margin: 20px auto;
-  width: 300px;
-  padding: 20px;
+  margin: 30px auto;
+  width: 350px;
+  padding: 25px;
   background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
 }
 
-section input, section textarea {
-  width: 100%;
+/* 알림 및 재고 리스트 */
+#noticeList,
+#inventoryList {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#noticeList div,
+#inventoryList div {
   padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+}
+
+small {
+  font-size: 12px;
+  color: #999;
 }
