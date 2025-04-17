@@ -6,15 +6,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h2>🔐 어드민 로그인</h2>
-    <form id="loginForm">
+  <div class="login-container">
+    <h2>🔐 로그인</h2>
+    <form id="loginForm" class="login-form">
       <input type="text" id="username" placeholder="아이디" required />
       <input type="password" id="password" placeholder="비밀번호" required />
       <button type="submit">로그인</button>
+      <p id="errorMessage" class="error-message"></p>
     </form>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
